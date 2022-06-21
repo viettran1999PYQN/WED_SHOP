@@ -1,0 +1,15 @@
+﻿
+<nav class="navbar">
+    <ul class="navbar_menu" aria-hidden="true">
+        @foreach (var menu in Model)
+        {
+            @Html.Action("MainMenuSup", "Module", new { @id = menu.Id })
+
+        }
+
+
+    </ul>
+    <div class="hamburger_container">
+        <i class="fa fa-bars" aria-hidden="true"></i>
+    </div>
+</nav>

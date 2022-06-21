@@ -1,0 +1,23 @@
+﻿@model IEnumerable<MyClass.Models.Menu>
+@{ 
+
+    var menu = ViewBag.Menu;//dùng để tạo ra dropdow con cho các dropdow cha
+}
+<li class="nav-item dropdown">
+    <a class="nav-link text-light text-uppercase dropdown-toggle" href="@menu.Link"
+       id="navarbarDropdow" role="button" data-bs-toggle="dropdown"
+       aria-expanded="false">
+        @menu.Name
+    </a>
+    <ul class="dropdown-menu " aria-labelledby="navbarDropdown">
+        @foreach (var item in Model)
+        {
+            <li>
+                <a class="dropdown-item" href="@item.Link">
+                    @item.Name
+                </a>
+            </li>
+        }
+
+    </ul>
+</li>

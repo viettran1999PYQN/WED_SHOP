@@ -1,0 +1,12 @@
+C:\Users\MYCOMPUTER\source\repos\Tran_Quoc_Viet_4151050175\MyClass\bin\Debug\MyClass.dll.config
+C:\Users\MYCOMPUTER\source\repos\Tran_Quoc_Viet_4151050175\MyClass\bin\Debug\MyClass.dll
+C:\Users\MYCOMPUTER\source\repos\Tran_Quoc_Viet_4151050175\MyClass\bin\Debug\MyClass.pdb
+C:\Users\MYCOMPUTER\source\repos\Tran_Quoc_Viet_4151050175\MyClass\bin\Debug\EntityFramework.dll
+C:\Users\MYCOMPUTER\source\repos\Tran_Quoc_Viet_4151050175\MyClass\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\MYCOMPUTER\source\repos\Tran_Quoc_Viet_4151050175\MyClass\bin\Debug\EntityFramework.xml
+C:\Users\MYCOMPUTER\source\repos\Tran_Quoc_Viet_4151050175\MyClass\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\MYCOMPUTER\source\repos\Tran_Quoc_Viet_4151050175\MyClass\obj\Debug\MyClass.csproj.AssemblyReference.cache
+C:\Users\MYCOMPUTER\source\repos\Tran_Quoc_Viet_4151050175\MyClass\obj\Debug\MyClass.csproj.CoreCompileInputs.cache
+C:\Users\MYCOMPUTER\source\repos\Tran_Quoc_Viet_4151050175\MyClass\obj\Debug\MyClass.csproj.CopyComplete
+C:\Users\MYCOMPUTER\source\repos\Tran_Quoc_Viet_4151050175\MyClass\obj\Debug\MyClass.dll
+C:\Users\MYCOMPUTER\source\repos\Tran_Quoc_Viet_4151050175\MyClass\obj\Debug\MyClass.pdb

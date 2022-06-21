@@ -1,0 +1,10 @@
+﻿@model IEnumerable<MyClass.Models.Menu>
+<ul class="footer_nav">
+    @foreach (var menu in Model)
+    {
+        <li><a href="@menu.Link">@menu.Name</a></li>
+    }
+
+    
+</ul>
+

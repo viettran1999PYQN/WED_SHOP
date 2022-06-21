@@ -1,0 +1,199 @@
+﻿@model MyClass.Models.Post
+
+@{
+    ViewBag.Title = "Xóa Page";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h2>Delete</h2>
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <!-- Main content -->
+    <section class="content my-2">
+
+        <!-- Default box -->
+        <div class="card">
+            <div class="card-header">
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken();
+                    <div class="row">
+                        <div class="col-md-6">
+                            <strong>Xác Nhận Xóa Page</strong>
+                        </div>
+                        <div class="col-md-6 text-right">
+                            <a href="@Url.Action("Edit","Page",new { id=Model.Id } )" class="btn btn-sm btn-success"><i class="fas fa-edit"></i>Cập Nhật</a>
+                            <a href="@Url.Action("Index","Page")" class="btn btn-sm btn-info "><i class="fas fa-long-arrow-alt-left"></i> Quay Lại danh sách</a>
+                            <button type="submit" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i>Xóa</button>
+
+
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered">
+                    <tr>
+                        <th style="width:120px">Tên Trường </th>
+                        <th>Nội Dung</th>
+                    </tr>
+                    <tr>
+                        <td>Tên Page</td>
+                        <td> @Html.DisplayFor(model => model.Title)</td>
+                    </tr>
+                   
+
+                    <tr>
+                        <td> Chi tiết</td>
+                        <td>@Html.DisplayFor(model => model.Detail)</td>
+                    </tr>
+                    <tr>
+                        <td>Từ Khóa</td>
+                        <td>@Html.DisplayFor(model => model.MetaKey)</td>
+                    </tr>
+                    <tr>
+                        <td>Người tạo </td>
+                        <td>@Html.DisplayFor(model => model.CreateBy)</td>
+                    </tr>
+                    <tr>
+                        <td> Ngày Tạo</td>
+                        <td>@Html.DisplayFor(model => model.CreateAt)</td>
+                    </tr>
+
+                    <tr>
+                        <td> Trạng Thái</td>
+                        <td>@Html.DisplayFor(model => model.Status)</td>
+                    </tr>
+                </table>
+            </div>
+            <!-- /.card-body -->
+            <!-- /.card-footer-->
+        </div>
+    </section>
+</div>
+<!-- /.card -->
+<!-- /.content-wrapper -->
+
+
+
+
+<div>
+    <h4>Post</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TopicId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TopicId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Slug)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Slug)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Detail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Detail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MetaDesc)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MetaDesc)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MetaKey)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MetaKey)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PostType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PostType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Img)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Img)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreateBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreateBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CreateAt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CreateAt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UpdateBy)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UpdateBy)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UpdateAt)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UpdateAt)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

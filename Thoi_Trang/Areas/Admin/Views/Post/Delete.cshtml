@@ -1,0 +1,75 @@
+﻿@model MyClass.Models.Post
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <!-- Main content -->
+    <section class="content my-2">
+
+        <!-- Default box -->
+        <div class="card">
+            <div class="card-header">
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken();
+                    <div class="row">
+                        <div class="col-md-6">
+                            <strong>Xác Nhận Xóa Danh Mục</strong>
+                        </div>
+                        <div class="col-md-6 text-right">
+                            <a href="@Url.Action("Edit","Post",new { id=Model.Id } )" class="btn btn-sm btn-success"><i class="fas fa-edit"></i>Cập Nhật</a>
+                            <a href="@Url.Action("Index","Post")" class="btn btn-sm btn-info "><i class="fas fa-long-arrow-alt-left"></i> Quay Lại danh sách</a>
+                            <button type="submit" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i>Xóa</button>
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered">
+                    <tr>
+                        <th style="width:120px">Tên Trường </th>
+                        <th>Nội Dung</th>
+                    </tr>
+                    <tr>
+                        <td>Tên Bài Post</td>
+                        <td> @Html.DisplayFor(model => model.Title)</td>
+                    </tr>
+                    <tr>
+                        <td>chủ đề cha</td>
+                        <td>@Html.DisplayFor(model => model.TopicId)</td>
+                    </tr>
+
+                    <tr>
+                        <td> Tóm Tắc</td>
+                        <td>@Html.DisplayFor(model => model.Detail)</td>
+                    </tr>
+                    <tr>
+                        <td>Kiểu Bài Post</td>
+                        <td>@Html.DisplayFor(model => model.PostType)</td>
+                    </tr>
+                    <tr>
+                        <td>Người tạo </td>
+                        <td>@Html.DisplayFor(model => model.CreateBy)</td>
+                    </tr>
+                    <tr>
+                        <td> Ngày Tạo</td>
+                        <td>@Html.DisplayFor(model => model.CreateAt)</td>
+                    </tr>
+
+                    <tr>
+                        <td> Trạng Thái</td>
+                        <td>@Html.DisplayFor(model => model.Status)</td>
+                    </tr>
+                </table>
+            </div>
+            <!-- /.card-body -->
+            <!-- /.card-footer-->
+        </div>
+    </section>
+</div>
+
+
+

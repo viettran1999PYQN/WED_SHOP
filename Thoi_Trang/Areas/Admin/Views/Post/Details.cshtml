@@ -1,0 +1,74 @@
+﻿@model MyClass.Models.Post
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <!-- Main content -->
+    <section class="content my-2">
+
+        <!-- Default box -->
+        <div class="card">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-md-6">
+                        <strong>Chi Tiết Sản Phẩm </strong>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <a href="@Url.Action("Edit","Post",new { id=Model.Id } )" class="btn btn-sm btn-success"><i class="fas fa-edit"></i>Cập Nhật</a>
+                        <a href="@Url.Action("DelTrash","Post",new { id=Model.Id } )" class="btn btn-sm btn-danger "><i class="fas fa-trash"></i>Xóa</a>
+                        <a href="@Url.Action("Index","Post")" class="btn btn-sm btn-info "><i class="fas fa-long-arrow-alt-left"></i> Quay Lại danh sách</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered">
+                    <tr>
+                        <th style="width:120px">Tên Trường </th>
+                        <th>Nội Dung</th>
+                    </tr>
+                    <tr>
+                        <td>Tên Bài Post</td>
+                        <td> @Html.DisplayFor(model => model.Title)</td>
+                    </tr>
+                    <tr>
+                        <td>@Html.DisplayNameFor(model => model.Slug)</td>
+                        <td> @Html.DisplayFor(model => model.Slug)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Tóm Tắc</td>
+                        <td>@Html.DisplayFor(model => model.Detail)</td>
+                    </tr>
+                    <tr>
+                        <td> Từ Khóa</td>
+                        <td>@Html.DisplayFor(model => model.MetaKey)</td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="col-md-6">ảnh </td>
+                        <td>@Html.DisplayFor(model => model.Img)</td>
+                    </tr>
+                    <tr>
+                        <td> @Html.DisplayNameFor(model => model.Status)</td>
+                        <td>@Html.DisplayFor(model => model.Status)</td>
+                    </tr>
+                </table>
+            </div>
+            <!-- /.card-body -->
+            <!-- /.card-footer-->
+        </div>
+    </section>
+</div>
+
+<h2>Details</h2>
+
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
